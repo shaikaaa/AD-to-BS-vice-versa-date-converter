@@ -1,0 +1,13 @@
+# Ignore the demo app files
+App.js
+App.test.js
+index.js
+index.css
+public/
+
+# Ignore node modules
+node_modules/
+
+# Optional: ignore config/editor files
+.vscode/
+.env

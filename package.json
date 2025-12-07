@@ -1,39 +1,44 @@
 {
-  "name": "calendar",
+  "name": "ad-bs-dateconverter",
   "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/dom": "^10.4.1",
-    "@testing-library/jest-dom": "^6.9.1",
-    "@testing-library/react": "^16.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+  "description": "AD to BS, and vice versa, date converter with interactive calendar picker for React - Nepali calendar",
+  "author": "shaikaniroula77@gmail.com",
+  "license": "MIT",
+  "keywords": [
+    "nepali-date",
+    "date-converter", 
+    "bikram-sambat",
+    "ad-to-bs",
+    "bs-to-ad",
+    "ad-bs",
+    "date-picker",
+    "nepali-calendar",
+    "react-datepicker",
+    "nepali-datepicker",
+    "bs-ad"
+  ],
+  "homepage": "https://github.com/your-username/ad-tobs-date-converter#readme",
+  
+  "files": ["dist"],
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "peerDependencies": {
+    "react": ">=17",
+    "react-dom": ">=17"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "build": "tsup src/lib/index.js --format cjs,esm --external react --external react-dom --minify",
+    "prepublishOnly": "npm run build"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "tsup": "^8.5.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   }
 }
