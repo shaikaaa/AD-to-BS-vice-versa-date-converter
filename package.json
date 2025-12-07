@@ -1,12 +1,12 @@
 {
   "name": "ad-bs-dateconverter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "AD to BS, and vice versa, date converter with interactive calendar picker for React - Nepali calendar",
   "author": "shaikaniroula77@gmail.com",
   "license": "MIT",
   "keywords": [
     "nepali-date",
-    "date-converter", 
+    "date-converter",
     "bikram-sambat",
     "ad-to-bs",
     "bs-to-ad",
@@ -18,8 +18,9 @@
     "bs-ad"
   ],
   "homepage": "https://github.com/your-username/ad-tobs-date-converter#readme",
-  
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "exports": {
@@ -33,7 +34,7 @@
     "react-dom": ">=17"
   },
   "scripts": {
-  "build": "tsup src/lib/index.js --format cjs,esm --external react --external react-dom --minify",
+    "build": "tsup src/lib/index.js --format cjs,esm --external react --external react-dom --minify",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
